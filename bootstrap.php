@@ -2,14 +2,16 @@
 
 require 'vendor/autoload.php';
 
+
+
 $dotenv = \Dotenv\Dotenv::create(__DIR__)->load();
 
 $constr = 'mysql:';
-$constr .= 'host=' . getenv('DB_HOSTNAME') . ';';
-$constr .= 'dbname=' . getenv('DB_DATABASE');
+$constr .= 'host=' . env('DB_HOSTNAME') . ';';
+$constr .= 'dbname=' . env('DB_DATABASE');
 
 try {
-    $db = new PDO($constr, getenv('DB_USERNAME'), getenv('DB_PASSWORD'));
+    $db = new PDO($constr, env('DB_USERNAME'), env('DB_PASSWORD'));
 } catch (PDOException $e) {
     echo 'Error: ' . $e->getMessage();
 }
