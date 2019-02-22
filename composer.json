@@ -1,0 +1,15 @@
+{
+    "name": "tmarquesini/squidguard-report",
+    "description": "Web page to display SquidGuard access dinied and register and report the denied requests",
+    "type": "project",
+    "require": {
+        "vlucas/phpdotenv": "^3.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thiago Marquesini",
+            "email": "contato@marquesini.com.br"
+        }
+    ]
+}
