@@ -11,6 +11,8 @@ $constr .= 'dbname=' . env('DB_DATABASE');
 
 if (! empty($_GET['u'])) {
     try {
+        date_default_timezone_set(env('TIMEZONE'));
+
         $db = new PDO($constr, env('DB_USERNAME'), env('DB_PASSWORD'));
 
         $stmt = $db->prepare('
