@@ -9,14 +9,10 @@ $constr = 'mysql:';
 $constr .= 'host=' . env('DB_HOSTNAME') . ';';
 $constr .= 'dbname=' . env('DB_DATABASE');
 
-try {
-    $db = new PDO($constr, env('DB_USERNAME'), env('DB_PASSWORD'));
-} catch (PDOException $e) {
-    echo 'Error: ' . $e->getMessage();
-}
-
 if (! empty($_GET['u'])) {
     try {
+        $db = new PDO($constr, env('DB_USERNAME'), env('DB_PASSWORD'));
+
         $stmt = $db->prepare('
             INSERT INTO requests (year, month, day, time, organization, organization_group, client_ip, client_name, client_user, client_group, request_group, request_url) 
             VALUES (:year, :month, :day, :time, :organization, :organization_group, :client_ip, :client_name, :client_user, :client_group, :request_group, :request_url)
