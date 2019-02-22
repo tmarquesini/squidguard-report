@@ -5,5 +5,5 @@ function env($varname) {
 }
 
 function base_url() {
-    return getenv('BASE_URL');
+    return env('BASE_URL');
 }
