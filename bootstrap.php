@@ -1,8 +1,7 @@
 <?php
 
 require 'vendor/autoload.php';
-
-
+require 'functions.php';
 
 $dotenv = \Dotenv\Dotenv::create(__DIR__)->load();
 
