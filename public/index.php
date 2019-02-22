@@ -16,12 +16,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
  	<!-- CSS ================================================== -->
-   <link rel="stylesheet" href="css/base.css">
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="<?=base_url()?>css/base.css">
+   <link rel="stylesheet" href="<?=base_url()?>css/main.css">
+   <link rel="stylesheet" href="<?=base_url()?>css/vendor.css">
 
    <!-- script ================================================== -->
-	<script src="js/modernizr.js"></script>
+	<script src="<?=base_url()?>js/modernizr.js"></script>
 
 </head>
 
@@ -84,9 +84,9 @@
    </div>
 
    <!-- Java Script ================================================== -->
-   <script src="js/jquery-2.1.3.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
+   <script src="<?=base_url()?>js/jquery-2.1.3.min.js"></script>
+   <script src="<?=base_url()?>js/plugins.js"></script>
+   <script src="<?=base_url()?>js/main.js"></script>
 
 </body>
 
