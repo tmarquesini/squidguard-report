@@ -10,23 +10,9 @@
     "use strict";
 
     /* --------------------------------------------------- */
-    /* Preloader
-    ------------------------------------------------------ */
-    $(window).load(function() {
-        // will first fade out the loading animation
-        $("#loader").fadeOut("fast", function(){
-
-            // will fade out the whole DIV that covers the website.
-            $("#preloader").fadeOut("fast");
-
-        });
-    })
-
-
-    /* --------------------------------------------------- */
     /*  Placeholder Plugin Settings
     ------------------------------------------------------ */
-    $('input, textarea, select').placeholder()
+    //$('input, textarea, select').placeholder()
 
 
     /*---------------------------------------------------- */
@@ -53,63 +39,7 @@
         mainContent = $('#main-404-content'),
         mainHeader = $('.main-header');
 
-    // open-close menu by clicking on the menu icon
-    toggleButton.on('click', function(e){
-
-        e.preventDefault();
-
-        toggleButton.toggleClass('is-clicked');
-        nav.toggleClass('menu-is-open');
-        mainHeader.toggleClass('menu-is-open');
-        mainContent.toggleClass('menu-is-open').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-            // firefox transitions break when parent overflow is changed,
-            // so we need to wait for the end of the trasition to give the body an overflow hidden
-            $('body').toggleClass('overflow-hidden');
-        });
-
-        // check if transitions are not supported
-        if($('html').hasClass('no-csstransitions')) {
-            $('body').toggleClass('overflow-hidden');
-        }
-
-    });
-
-    // close menu clicking outside the menu itself
-    mainContent.on('click', function(e){
-
-        if( !$(e.target).is('.menu-toggle, .menu-toggle span') ) {
-
-            toggleButton.removeClass('is-clicked');
-            nav.removeClass('menu-is-open');
-            mainHeader.removeClass('menu-is-open');
-            mainContent.removeClass('menu-is-open').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-                $('body').removeClass('overflow-hidden');
-            });
-
-            // check if transitions are not supported
-            if($('html').hasClass('no-csstransitions')) {
-                $('body').removeClass('overflow-hidden');
-            }
-
-        }
-    });
-
-
-    /* --------------------------------------------------- */
-    /*  Vegas Slideshow
-    ------------------------------------------------------ */
-    $(".main-content-slides").vegas({
-        transition: 'fade',
-        transitionDuration: 2500,
-        delay: 5000,
-        slides: [
-            { src: "images/slides/woods.jpg" },
-            { src: "images/slides/greens.jpg" },
-            { src: "images/slides/dandelion.jpg" }
-        ]
-    });
-
-
+    
     /* --------------------------------------------------- */
     /*  Particle JS
     ------------------------------------------------------ */
